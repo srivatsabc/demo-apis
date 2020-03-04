@@ -24,10 +24,6 @@ app.get('/videos/:name', function (req, res) {
   res.status(200).json({'Hello videos': req.params.name.toUpperCase(), 'Date': new Date()});
 })
 
-app.get('/blogs/:name', function (req, res) {
-  console.log("name: " + req.params.name.toUpperCase());
-  res.status(200).json({'Hello videos': req.params.name.toUpperCase(), 'Date': new Date()});
-})
 
 var server = app.listen(8080, function () {
    console.log("Example app listening at http on tcp/8080")
