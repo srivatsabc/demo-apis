@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 app.get('/hello/:name', function (req, res) {
   console.log("name: " + req.params.name.toUpperCase());
-  res.status(200).json({'Hello Good Boy': req.params.name.toUpperCase()});
+  res.status(200).json({'Hello Good Boy': req.params.name.toUpperCase(), 'Date': new Date()});
 })
 
 var server = app.listen(8080, function () {
